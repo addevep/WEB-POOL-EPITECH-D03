@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+}
+
+.box1 {
+    background-color: lightblue;
+}
+
+.box2 {
+    background-color: lightgreen;
+}
+
+.box3 {
+    background-color: lightyellow;
+}
+
+.box4 {
+    background-color: lightyellow;
+}
+
+.box5 {
+    background-color: lightsalmon;
+    margin: 0 !important;
+}
+
+@media screen and (max-width: 767px) {
+
+    [class*='box'] {
+        width: 100vw;
+        height: 25vh;
+        margin: 0 0 15px;
+    }
+
+    [class*='box-m-'] {
+        display: none;
+    }
+
+    [class*='box-l-'] {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023.5px) {
+    [class*='box'] {
+        width: 50vw;
+        height: 25vh;
+    }
+
+    [class*='box-m-'] {
+        background-color: purple;
+        flex: 2 1 49%;
+    }
+
+    .box3,
+    .box4 {
+        flex: 2 1 49%;
+    }
+
+    .box2,
+    .box5 {
+        width: 100vw;
+    }
+
+    .flex {
+        display: flex;
+        flex-flow: column wrap;
+        gap: 15px;
+    }
+
+    .bloc1 {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 15px;
+    }
+
+    [class*='box-l-'] {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    [class*='box'] {
+        width: 32vw;
+        height: 25vh;
+    }
+
+    [class*='box-m-'] {
+        background-color: purple;
+        flex: 0 32.35%;
+    }
+
+    [class*='box-l-'] {
+        background-color: pink;
+        flex: 0 32.35%;
+    }
+
+    .box3,
+    .box4 {
+        flex: 0 32.35%;
+    }
+
+    .box2,
+    .box5 {
+        width: 100vw;
+    }
+
+    .flex {
+        display: flex;
+        flex-flow: column wrap;
+        gap: 15px;
+    }
+
+    .bloc1 {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 15px;
+    }
+
+}
